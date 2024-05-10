@@ -1,38 +1,42 @@
 #include <stdio.h>
+#include <stdlib.h>
+
+void res(double first, double second, char operator)
+{
+    switch (operator) {
+        case '+':
+            printf("%lf\n", (first + second));
+            break;
+        case '-':
+            printf("%lf\n", (first - second));
+            break;
+        case '*':
+            printf("%lf\n", (first * second));
+            break;
+        case '/':
+            if (second != 0.0)
+                printf("%lf\n", (first / second));
+            else {
+                system("./matrix");
+            }
+            break;
+        default:
+            printf("Invalid operator");
+    }
+}
 
 int main()
 {
-  char operator;
-  double first, second;
-  printf("Enter an operator (+, -, *, /): ");
-  scanf("%c", &operator);
+    char operator;
+    double first, second;
 
-  printf("Enter the two numbers independently");
-  scanf("%lf %lf", &first, &second);
+    printf("Enter an operator (+, -, *, /): ");
+    scanf(" %c", &operator);
 
-  switch (operator) {
-    case '+':
-      printf("%lf + %lf = %lf", first, second, (first + second));
-      break;
+    printf("Enter two numbers separated by a space: ");
+    scanf("%lf %lf", &first, &second);
 
-    case '-':
-      printf("%lf + %lf = %lf", first, second, (first - second));
-      break;
+    res(first, second, operator);
 
-    case '*':
-      printf("%lf + %lf = %lf", first, second, (first * second));
-      break;
-
-    case '/':
-      if (second != 0.0)
-        printf("%lf + %lf = %lf", first, second, (first / second));
-      else
-        printf("ERROR");
-      break;
-
-    default:
-      printf("Invalid operator");
-  }
-
-  return 0;
+    return 0;
 }
