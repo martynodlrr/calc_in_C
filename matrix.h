@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <time.h>
+
 #include <ncurses.h>
 
 #define WIDTH  80
