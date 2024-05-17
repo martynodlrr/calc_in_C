@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "matrix.h"
+
 void res(double first, double second, char operator)
 {
     switch (operator) {
@@ -17,7 +19,7 @@ void res(double first, double second, char operator)
             if (second != 0.0)
                 printf("%lf\n", (first / second));
             else {
-                system("./matrix");
+                invoke_matrix();
             }
             break;
         default:

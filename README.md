@@ -6,3 +6,5 @@ cred to mohd-akram for the raining matrix code refactored to work in WSL
 
 easter egg:
 divide by 0
+
+gcc -o output_file_name source_file1.c source_file2.c -l<library>
