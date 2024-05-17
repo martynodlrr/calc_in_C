@@ -21,8 +21,8 @@ extern struct trail trails[WIDTH];
 
 void init_trail(struct trail *trail);
 
-void update();
+void update(void);
 
-void invoke_matrix();
+void invoke_matrix(void);
 
 #endif
