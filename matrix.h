@@ -25,8 +25,4 @@ void update();
 
 void invoke_matrix();
 
-#else
-
-printf("This file is already defined");
-
 #endif
